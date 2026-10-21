@@ -62,10 +62,10 @@ const POLL_QUERY = `query($guid: EntityGuid!, $accountId: Int!, $rt: Nrql!, $err
 /** NRQL for the two graphs: last 60 minutes in 1-minute buckets. */
 export function nrqlQueries(guid: string): { rt: string; err: string } {
   if (!/^[A-Za-z0-9+/=_-]+$/.test(guid)) throw new Error(`Invalid entity GUID: ${guid}`);
-  const where = `FROM Transaction WHERE entityGuid = '${guid}' AND transactionType = 'Web' TIMESERIES 1 minute SINCE 60 minutes ago`;
+
   return {
-    rt: `SELECT average(duration) * 1000 AS 'value' ${where}`,
-    err: `SELECT percentage(count(*), WHERE error IS true) AS 'value' ${where}`,
+    rt: `SELECT average(newrelic.timeslice.value) * 1000 as 'value' FROM Metric WHERE entity.guid = '${guid}' AND metricTimesliceName = 'HttpDispatcher' TIMESERIES 1 minute SINCE 60 MINUTES AGO LIMIT MAX`,
+    err: `SELECT percentage(count(*), WHERE error IS true) AS 'value' FROM Transaction WHERE entityGuid = '${guid}' TIMESERIES 1 minute SINCE 60 minutes ago`,
   };
 }
 
