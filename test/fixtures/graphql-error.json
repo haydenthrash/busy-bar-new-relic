@@ -1,0 +1,4 @@
+{
+  "data": { "actor": { "account": null } },
+  "errors": [{ "message": "Account 1234567 not found or access denied", "path": ["actor", "account"] }]
+}

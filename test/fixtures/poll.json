@@ -1,0 +1,79 @@
+{
+  "data": {
+    "actor": {
+      "entity": {
+        "alertSeverity": "WARNING"
+      },
+      "account": {
+        "rt": {
+          "results": [
+            {
+              "beginTimeSeconds": 1761060000,
+              "endTimeSeconds": 1761060060,
+              "value": 210.5
+            },
+            {
+              "beginTimeSeconds": 1761060060,
+              "endTimeSeconds": 1761060120,
+              "value": 198.25
+            },
+            {
+              "beginTimeSeconds": 1761060120,
+              "endTimeSeconds": 1761060180,
+              "value": null
+            },
+            {
+              "beginTimeSeconds": 1761060180,
+              "endTimeSeconds": 1761060240,
+              "value": 245.0
+            },
+            {
+              "beginTimeSeconds": 1761060240,
+              "endTimeSeconds": 1761060300,
+              "value": 260.75
+            },
+            {
+              "beginTimeSeconds": 1761060300,
+              "endTimeSeconds": 1761060360,
+              "value": 300.1
+            }
+          ]
+        },
+        "err": {
+          "results": [
+            {
+              "beginTimeSeconds": 1761060000,
+              "endTimeSeconds": 1761060060,
+              "value": 0.0
+            },
+            {
+              "beginTimeSeconds": 1761060060,
+              "endTimeSeconds": 1761060120,
+              "value": 0.42
+            },
+            {
+              "beginTimeSeconds": 1761060120,
+              "endTimeSeconds": 1761060180,
+              "value": null
+            },
+            {
+              "beginTimeSeconds": 1761060180,
+              "endTimeSeconds": 1761060240,
+              "value": 1.5
+            },
+            {
+              "beginTimeSeconds": 1761060240,
+              "endTimeSeconds": 1761060300,
+              "value": 12.345
+            },
+            {
+              "beginTimeSeconds": 1761060300,
+              "endTimeSeconds": 1761060360,
+              "value": 0.0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "data": {
+    "actor": {
+      "entity": {
+        "guid": "MTIzNDU2N3xBUE18QVBQTElDQVRJT058OTg3NjU0MzI",
+        "name": "checkout-service",
+        "accountId": 1234567,
+        "domain": "APM",
+        "type": "APPLICATION",
+        "alertSeverity": "NOT_ALERTING"
+      }
+    }
+  }
+}
