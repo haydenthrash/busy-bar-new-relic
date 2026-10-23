@@ -88,8 +88,8 @@ Draws synthetic data through the same render and device code. The alert severity
 Each poll is a single NerdGraph request containing the entity's `alertSeverity` and two NRQL queries:
 
 ```sql
-SELECT average(duration) * 1000 AS 'value' FROM Transaction
-  WHERE entityGuid = '<guid>' AND transactionType = 'Web' TIMESERIES 1 minute SINCE 60 minutes ago
+SELECT average(newrelic.timeslice.value) * 1000 as 'value' FROM Metric WHERE entity.guid = '<guid>' AND metricTimesliceName = 'HttpDispatcher' TIMESERIES 1 minute SINCE 60 MINUTES AGO LIMIT MAX
+
 SELECT percentage(count(*), WHERE error IS true) AS 'value' FROM Transaction
   WHERE entityGuid = '<guid>' AND transactionType = 'Web' TIMESERIES 1 minute SINCE 60 minutes ago
 ```
